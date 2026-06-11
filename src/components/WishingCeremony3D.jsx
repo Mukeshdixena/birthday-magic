@@ -122,7 +122,7 @@ export default function WishingCeremony3D({ sectionRef }) {
 
     // ── 3. Load OBJ/MTL 3D Cake model ───────────────────────────
     const mtlLoader = new MTLLoader();
-    const basePath = "/asets/birthday-cake/birthday-cake_v3_L3.123c45c5c817-3d9f-461e-83bb-8157bffd5569/";
+    const basePath = (import.meta.env.BASE_URL || '/') + "asets/birthday-cake/birthday-cake_v3_L3.123c45c5c817-3d9f-461e-83bb-8157bffd5569/";
     
     mtlLoader.setPath(basePath);
     mtlLoader.load(

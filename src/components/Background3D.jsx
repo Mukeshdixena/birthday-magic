@@ -177,9 +177,10 @@ export default function Background3D({ theme }) {
 
     // ── Floating 3D Assets (Balloon, Cake, Gift Box) ───────────────
     const textureLoader = new THREE.TextureLoader();
-    const texBalloon = textureLoader.load("/asets/Cute Balloon.png");
-    const texCake = textureLoader.load("/asets/Cute Birthday Cake.png");
-    const texGift = textureLoader.load("/asets/Cute Gift Box.png");
+    const base = import.meta.env.BASE_URL || '/';
+    const texBalloon = textureLoader.load(base + "asets/Cute Balloon.png");
+    const texCake = textureLoader.load(base + "asets/Cute Birthday Cake.png");
+    const texGift = textureLoader.load(base + "asets/Cute Gift Box.png");
 
     const floaters = [];
     const floaterCount = 6;
