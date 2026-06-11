@@ -860,3 +860,53 @@ body {
   }
 }
 
+/* ── Decorative Floating Balloons ──────────────────────────────── */
+.floating-balloons-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1; /* Above background canvas, below main content */
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.floating-balloon {
+  position: absolute;
+  bottom: 0;
+  will-change: transform;
+  animation-name: balloonRise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.floating-balloon-inner {
+  display: block;
+  width: 100%;
+  height: auto;
+  will-change: transform;
+  animation-name: balloonSway;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes balloonRise {
+  0% {
+    transform: translateY(105vh);
+  }
+  100% {
+    transform: translateY(-20vh);
+  }
+}
+
+@keyframes balloonSway {
+  0% {
+    transform: translateX(var(--sway-x-start, -20px)) rotate(var(--sway-rot-start, -8deg));
+  }
+  100% {
+    transform: translateX(var(--sway-x-end, 20px)) rotate(var(--sway-rot-end, 8deg));
+  }
+}
+
+

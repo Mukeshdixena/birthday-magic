@@ -17,6 +17,7 @@ import Profile from "./components/Profile";
 import GiftBox3D from "./components/GiftBox3D";
 import WishingCeremony3D from "./components/WishingCeremony3D";
 import Celebration from "./components/Celebration";
+import FloatingBalloons from "./components/FloatingBalloons";
 
 import { CONFIG } from "./config";
 
@@ -148,6 +149,9 @@ export default function App() {
     <>
       {/* Fixed 3D animated background */}
       <Background3D theme={theme} />
+
+      {/* Decorative floating balloons overlay */}
+      <FloatingBalloons />
 
       {/* Fixed scroll navigation dots */}
       <ScrollNav
