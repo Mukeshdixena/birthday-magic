@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/happybirthday/',
+  base: '/birthday-magic/',
   build: {
     chunkSizeWarningLimit: 1200,
     rollupOptions: {
