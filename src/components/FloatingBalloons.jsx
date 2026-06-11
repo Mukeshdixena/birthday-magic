@@ -8,7 +8,7 @@ export default function FloatingBalloons() {
 
     for (let i = 0; i < count; i++) {
       const assetIndex = (i % 3) + 1; // Distribute ballon1, ballon2, ballon3
-      const size = Math.floor(Math.random() * 45) + 450; // Size between 45px and 90px
+      const size = Math.floor(Math.random() * 45) + 250; // Size between 45px and 90px
       const left = Math.random() * 90 + 5; // Spawning position between 5% and 95% width
       
       // Vertical rise duration and delays
