@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 export default function FloatingBalloons() {
   const balloons = useMemo(() => {
     const list = [];
-    const count = 30;
+    const count = 20;
     const baseUrl = import.meta.env.BASE_URL || "/";
 
     for (let i = 0; i < count; i++) {
